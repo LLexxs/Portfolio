@@ -1,0 +1,272 @@
+<style>
+    .letter {
+        width: 0.75rem;
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.php" style="position: absolute; left: 1em;">
+            <span id="word">
+                <span class="letter">P</span>
+                <span class="letter">o</span>
+                <span class="letter">r</span>
+                <span class="letter">t</span>
+                <span class="letter">f</span>
+                <span class="letter">o</span>
+                <span class="letter">l</span>
+                <span class="letter">i</span>
+                <span class="letter">o</span>
+                <span class="letter"></span>
+                <span class="letter"></span>
+                <span class="letter"></span>
+                <span class="letter"></span>
+                <span class="letter"></span>
+                <span class="letter"></span>
+                <span class="letter"></span>
+                <span class="letter"></span>
+                <span class="letter"></span>
+            </span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mon_profil.php">Mon profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formation.php">Formation</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Veilles
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="veille_technologique.php">Veille technologique</a></li>
+                        <li><a class="dropdown-item" href="veille_juridique.php">Veille juridique</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Synthèse</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="synthese.php">Synthèse</a>
+                </li>
+            </ul>
+            <a class="btn btn-outline-dark fw-bold" href="contact.php">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    let path = window.location.pathname.split("/").pop();
+    if (path == '') {
+        window.location.replace("index.php")
+    }
+    ;
+    console.log(path);
+    switch (path) {
+        case 'index.php' :
+            $('.nav-item > .nav-link').parent().removeClass('active');
+            $('a[href="' + path + '"]').addClass('active');
+
+        case '' :
+            $('.nav-item > .nav-link').parent().removeClass('active');
+            $('a[href="index.php"]').addClass('active');
+
+        case 'mon_profil.php' :
+            $('.nav-item > .nav-link').parent().removeClass('active');
+            $('a[href="' + path + '"]').addClass('active');
+
+        case 'formation.php' :
+            $('.nav-item > .nav-link').parent().removeClass('active');
+            $('a[href="' + path + '"]').addClass('active');
+
+        case 'synthese.php' :
+            $('.nav-item > .nav-link').parent().removeClass('active');
+            $('a[href="' + path + '"]').addClass('active');
+
+        case 'contact.php' :
+            $('.nav-item > .nav-link').parent().removeClass('active');
+            $('a[href="' + path + '"]').addClass('active');
+
+    }
+
+    Letters = function() {
+        this.lettersDOM = null;
+        this.active = null;
+        this.letters = [];
+        this.alphabet = ["a", "b", "c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","i","u","v","w","x","y","z","~","&","|","^","ç","@","]","[","{","}","ù","*","µ","¤","$","£","€","°",")","(","+","-","/","<",">","²","`","é","è","1","2","3","4","5","6","7","8","9","0"
+        ];
+
+        return this;
+    };
+
+    Letters.prototype.init = function( word ) {
+
+        this.lettersDOM = document.querySelectorAll('.letter');
+        this.active = true;
+        let i;
+        let nextChar;
+        let lettersMax = this.lettersDOM.length;
+
+        for ( i = 0; i < this.lettersDOM.length; i++ ) {
+
+            if ( word.charAt( i ) != "" )
+                nextChar = word.charAt( i );
+            else
+                nextChar = false;
+
+            this.letters.push( new Letter( this.lettersDOM[ i ],  nextChar ) );
+
+        }
+
+        if ( word.length > lettersMax ) {
+
+            let wordContainer = document.getElementById("word");
+
+            for ( i = lettersMax; i < word.length; i++ ) {
+                let letterSpan = document.createElement('span');
+                letterSpan.innerHTML = "";
+                letterSpan.classList.add('letter');
+                wordContainer.appendChild( letterSpan );
+                this.letters.push( new Letter( letterSpan,  word.charAt( i ) ) );
+            }
+        }
+
+        this.animate();
+
+        return this;
+
+    };
+
+    Letters.prototype.animate = function() {
+        let i;
+        let random;
+        let char;
+
+        if ( this.active ) {
+
+            window.requestAnimationFrame( this.animate.bind(this) );
+
+            let indexes = [];
+
+            for ( i = 0; i < this.letters.length; i++ ) {
+
+                let current = this.letters[ i ];
+
+                if ( !current.isDead ) {
+                    random = Math.floor(Math.random() * (this.alphabet.length - 0));
+                    char = this.alphabet[ random ];
+                    current.render( char );
+                } else {
+                    indexes.push( i );
+                }
+            }
+
+            for ( i = 0; i < indexes.length; i++ ) {
+                this.letters.splice( indexes[ i ], 1 );
+            }
+
+            if ( this.letters.length == 0 ) {
+                this.stop();
+            }
+        }
+    };
+
+    Letters.prototype.start = function( word ) {
+        this.init( word );
+    };
+
+    Letters.prototype.stop = function() {
+        this.active = false;
+    };
+
+    Letter = function( DOMElement, nextChar ) {
+
+        let scope = this;
+
+        this.DOMEl = DOMElement;
+        this.char = DOMElement.innerHTML;
+        this.next = nextChar;
+        this.speed = Math.floor(Math.random() * (300 - 50) );
+        this.total = 0;
+        this.duration = 2000;
+        this.animating = true;
+        this.isDead = false;
+
+        this.timer = setInterval(function() {
+            if ( scope.animating === true ) {
+                scope.total += scope.speed;
+            }
+            scope.animating = !scope.animating;
+        }, this.speed);
+
+        this.animate();
+
+        return this;
+
+    };
+
+    Letter.prototype.animate = function() {
+        let i;
+        let random;
+
+        if ( !this.isDead ) {
+            window.requestAnimationFrame( this.animate.bind(this) );
+        }
+
+
+        if ( this.total < this.duration ) {
+
+            if ( this.animating ) {
+                this.DOMEl.innerHTML = this.char;
+            }
+
+        } else {
+            this.isDead = true;
+
+            if ( !this.next ) {
+                let parent = document.getElementById('word');
+                parent.removeChild( this.DOMEl );
+                return;
+            }
+
+            this.DOMEl.innerHTML = this.next;
+        }
+    };
+
+    Letter.prototype.render = function( char ) {
+
+        if ( !this.animating ) {
+            this.char = char;
+        }
+
+    };
+
+    let word = [ "Portfolio         ", "AlexandreDomingues", "Développeur       " ];
+    let nextWord = 1;
+
+    let letters = new Letters();
+
+    setTimeout( function() {
+
+        letters.start( word[ nextWord ] );
+
+        setInterval(function() {
+            nextWord++;
+            if ( nextWord >= word.length )
+                nextWord = 0;
+
+            letters.start( word[ nextWord ] );
+        }, 10000);
+
+    }, 2000);
+</script>
