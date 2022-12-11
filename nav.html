@@ -42,6 +42,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="formation.php">Formation</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="apprentissage.php">Apprentissage</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
@@ -94,6 +97,10 @@
             $('a[href="' + path + '"]').addClass('active');
 
         case 'contact.php' :
+            $('.nav-item > .nav-link').parent().removeClass('active');
+            $('a[href="' + path + '"]').addClass('active');
+
+        case 'apprentissage.php' :
             $('.nav-item > .nav-link').parent().removeClass('active');
             $('a[href="' + path + '"]').addClass('active');
 
