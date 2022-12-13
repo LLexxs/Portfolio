@@ -6,7 +6,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="index.php" style="position: absolute; left: 1em;">
+        <a class="navbar-brand fw-bold" href="index.html" style="position: absolute; left: 1em;">
             <span id="word">
                 <span class="letter">P</span>
                 <span class="letter">o</span>
@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
+                    <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mon_profil.php">Mon profil</a>
@@ -52,11 +52,10 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="veille_technologique.php">Veille technologique</a></li>
-                        <li><a class="dropdown-item" href="veille_juridique.php">Veille juridique</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Synthèse</a></li>
+                        <li><a class="dropdown-item" href="veille_juridique.php">Veille juridique</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -106,17 +105,17 @@
 
     }
 
-    Letters = function() {
+    Letters = function () {
         this.lettersDOM = null;
         this.active = null;
         this.letters = [];
-        this.alphabet = ["a", "b", "c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","i","u","v","w","x","y","z","~","&","|","^","ç","@","]","[","{","}","ù","*","µ","¤","$","£","€","°",")","(","+","-","/","<",">","²","`","é","è","1","2","3","4","5","6","7","8","9","0"
+        this.alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "i", "u", "v", "w", "x", "y", "z", "~", "&", "|", "^", "ç", "@", "]", "[", "{", "}", "ù", "*", "µ", "¤", "$", "£", "€", "°", ")", "(", "+", "-", "/", "<", ">", "²", "`", "é", "è", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
         ];
 
         return this;
     };
 
-    Letters.prototype.init = function( word ) {
+    Letters.prototype.init = function (word) {
 
         this.lettersDOM = document.querySelectorAll('.letter');
         this.active = true;
@@ -124,27 +123,27 @@
         let nextChar;
         let lettersMax = this.lettersDOM.length;
 
-        for ( i = 0; i < this.lettersDOM.length; i++ ) {
+        for (i = 0; i < this.lettersDOM.length; i++) {
 
-            if ( word.charAt( i ) != "" )
-                nextChar = word.charAt( i );
+            if (word.charAt(i) != "")
+                nextChar = word.charAt(i);
             else
                 nextChar = false;
 
-            this.letters.push( new Letter( this.lettersDOM[ i ],  nextChar ) );
+            this.letters.push(new Letter(this.lettersDOM[i], nextChar));
 
         }
 
-        if ( word.length > lettersMax ) {
+        if (word.length > lettersMax) {
 
             let wordContainer = document.getElementById("word");
 
-            for ( i = lettersMax; i < word.length; i++ ) {
+            for (i = lettersMax; i < word.length; i++) {
                 let letterSpan = document.createElement('span');
                 letterSpan.innerHTML = "";
                 letterSpan.classList.add('letter');
-                wordContainer.appendChild( letterSpan );
-                this.letters.push( new Letter( letterSpan,  word.charAt( i ) ) );
+                wordContainer.appendChild(letterSpan);
+                this.letters.push(new Letter(letterSpan, word.charAt(i)));
             }
         }
 
@@ -154,63 +153,63 @@
 
     };
 
-    Letters.prototype.animate = function() {
+    Letters.prototype.animate = function () {
         let i;
         let random;
         let char;
 
-        if ( this.active ) {
+        if (this.active) {
 
-            window.requestAnimationFrame( this.animate.bind(this) );
+            window.requestAnimationFrame(this.animate.bind(this));
 
             let indexes = [];
 
-            for ( i = 0; i < this.letters.length; i++ ) {
+            for (i = 0; i < this.letters.length; i++) {
 
-                let current = this.letters[ i ];
+                let current = this.letters[i];
 
-                if ( !current.isDead ) {
+                if (!current.isDead) {
                     random = Math.floor(Math.random() * (this.alphabet.length - 0));
-                    char = this.alphabet[ random ];
-                    current.render( char );
+                    char = this.alphabet[random];
+                    current.render(char);
                 } else {
-                    indexes.push( i );
+                    indexes.push(i);
                 }
             }
 
-            for ( i = 0; i < indexes.length; i++ ) {
-                this.letters.splice( indexes[ i ], 1 );
+            for (i = 0; i < indexes.length; i++) {
+                this.letters.splice(indexes[i], 1);
             }
 
-            if ( this.letters.length == 0 ) {
+            if (this.letters.length == 0) {
                 this.stop();
             }
         }
     };
 
-    Letters.prototype.start = function( word ) {
-        this.init( word );
+    Letters.prototype.start = function (word) {
+        this.init(word);
     };
 
-    Letters.prototype.stop = function() {
+    Letters.prototype.stop = function () {
         this.active = false;
     };
 
-    Letter = function( DOMElement, nextChar ) {
+    Letter = function (DOMElement, nextChar) {
 
         let scope = this;
 
         this.DOMEl = DOMElement;
         this.char = DOMElement.innerHTML;
         this.next = nextChar;
-        this.speed = Math.floor(Math.random() * (300 - 50) );
+        this.speed = Math.floor(Math.random() * (300 - 50));
         this.total = 0;
         this.duration = 2000;
         this.animating = true;
         this.isDead = false;
 
-        this.timer = setInterval(function() {
-            if ( scope.animating === true ) {
+        this.timer = setInterval(function () {
+            if (scope.animating === true) {
                 scope.total += scope.speed;
             }
             scope.animating = !scope.animating;
@@ -222,27 +221,27 @@
 
     };
 
-    Letter.prototype.animate = function() {
+    Letter.prototype.animate = function () {
         let i;
         let random;
 
-        if ( !this.isDead ) {
-            window.requestAnimationFrame( this.animate.bind(this) );
+        if (!this.isDead) {
+            window.requestAnimationFrame(this.animate.bind(this));
         }
 
 
-        if ( this.total < this.duration ) {
+        if (this.total < this.duration) {
 
-            if ( this.animating ) {
+            if (this.animating) {
                 this.DOMEl.innerHTML = this.char;
             }
 
         } else {
             this.isDead = true;
 
-            if ( !this.next ) {
+            if (!this.next) {
                 let parent = document.getElementById('word');
-                parent.removeChild( this.DOMEl );
+                parent.removeChild(this.DOMEl);
                 return;
             }
 
@@ -250,29 +249,29 @@
         }
     };
 
-    Letter.prototype.render = function( char ) {
+    Letter.prototype.render = function (char) {
 
-        if ( !this.animating ) {
+        if (!this.animating) {
             this.char = char;
         }
 
     };
 
-    let word = [ "Portfolio         ", "AlexandreDomingues", "Développeur       " ];
+    let word = ["Portfolio         ", "AlexandreDomingues", "Développeur       "];
     let nextWord = 1;
 
     let letters = new Letters();
 
-    setTimeout( function() {
+    setTimeout(function () {
 
-        letters.start( word[ nextWord ] );
+        letters.start(word[nextWord]);
 
-        setInterval(function() {
+        setInterval(function () {
             nextWord++;
-            if ( nextWord >= word.length )
+            if (nextWord >= word.length)
                 nextWord = 0;
 
-            letters.start( word[ nextWord ] );
+            letters.start(word[nextWord]);
         }, 10000);
 
     }, 2000);
