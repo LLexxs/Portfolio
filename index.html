@@ -137,16 +137,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mon_profil.html">Mon profil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="formation.php">Formation</a>
+                    <a class="nav-link" href="formation.html">Formation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="apprentissage.php">Apprentissage</a>
+                    <a class="nav-link" href="apprentissage.html">Apprentissage</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -154,7 +154,7 @@
                         Veilles
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="veille_technologique.php">Veille technologique</a></li>
+                        <li><a class="dropdown-item" href="veille_technologique.html">Veille technologique</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -162,7 +162,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="synthese.php">Synthèse</a>
+                    <a class="nav-link" href="synthese.html">Synthèse</a>
                 </li>
             </ul>
             <a class="btn btn-outline-dark fw-bold" href="contact.php">Contact</a>
@@ -402,16 +402,6 @@
             </div>
         </div>
     </div>
-    <svg style="position: fixed; top: 100vh">
-        <defs>
-            <filter id="blob">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                               result="blob"></feColorMatrix>
-                <!--feComposite(in="SourceGraphic" in2="blob" operator="atop") //After reviewing this after years I can't remember why I added this but it isn't necessary for the blob effect-->
-            </filter>
-        </defs>
-    </svg>
 </footer>
 </body>
 </html>

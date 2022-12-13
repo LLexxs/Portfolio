@@ -28,191 +28,29 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <title>Mon profil - Portfolio</title>
+    <title>Synthèse - Portfolio</title>
 </head>
 <body>
 
 <style>
-    .box {
-        width: 250px;
-        background-color: #ddd;
-        margin-left: 10vw;
-        border-radius: 2000px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    pre {
+        display: block;
+        padding: 9.5px;
+        margin: 0 0 10px;
+        word-break: break-all;
+        word-wrap: break-word;
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 
-    .skills {
-        text-align: right;
-        padding-top: 2vh;
-        padding-bottom: 1vh;
-        color: white;
-        border-radius: 2000px;
-        animation-duration: 0.7s;
-        animation-timing-function: ease;
-        animation-fill-mode: forwards;
+    li {
+        list-style: none;
     }
 
-    @keyframes html {
-        from {
-            width: 0;
-        }
-        to {
-            width: 85%;
-            background-color: #4caf50;
-        }
+    button {
+        margin-top: 1vh;
     }
-
-    @keyframes css {
-        from {
-            width: 0;
-        }
-        to {
-            width: 85%;
-            background-color: #2196f3;
-        }
-    }
-
-    @keyframes js {
-        from {
-            width: 0;
-        }
-        to {
-            width: 65%;
-            background-color: #f44336;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes java {
-        from {
-            width: 0;
-        }
-        to {
-            width: 70%;
-            background-color: #5382a1;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes python {
-        from {
-            width: 0;
-        }
-        to {
-            width: 55%;
-            background-color: #ffd43b;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes bootstrap {
-        from {
-            width: 0;
-        }
-        to {
-            width: 70%;
-            background-color: #563d7c;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes jquery {
-        from {
-            width: 0;
-        }
-        to {
-            width: 60%;
-            background-color: #0769ad;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes react {
-        from {
-            width: 0;
-        }
-        to {
-            width: 60%;
-            background-color: #61dbfb;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes symfony {
-        from {
-            width: 0;
-        }
-        to {
-            width: 70%;
-            background-color: lightgreen;
-            border-radius: 2000px;
-        }
-    }
-
-    .html {
-        animation-name: html;
-    }
-
-    .css {
-        animation-name: css;
-    }
-
-    .js {
-        animation-name: js;
-    }
-
-    .java {
-        animation-name: java;
-    }
-
-    .python {
-        animation-name: python;
-    }
-
-    .bootstrap {
-        animation-name: bootstrap;
-    }
-
-    .jquery {
-        animation-name: jquery;
-    }
-
-    .react {
-        animation-name: react;
-    }
-
-    .symfony {
-        animation-name: symfony;
-    }
-
-    .container {
-        margin-top: 6%;
-    }
-
-    .oneskill p {
-        font-size: 130%;
-        position: relative;
-    }
-
-    .oneskill {
-        margin-top: 5vh;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .box {
-            margin-left: 20vw;
-            width: 55vw;
-        }
-    }
-
-    @media only screen and (min-width: 600px) and (max-width: 768px) {
-        .box {
-            margin-left: 20vw;
-            width: 40vw;
-        }
-    }
-
-
 </style>
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
@@ -247,7 +85,7 @@
                     <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="mon_profil.html">Mon profil</a>
+                    <a class="nav-link" href="mon_profil.html">Mon profil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="formation.html">Formation</a>
@@ -269,7 +107,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="synthese.html">Synthèse</a>
+                    <a class="nav-link active" href="synthese.html">Synthèse</a>
                 </li>
             </ul>
             <a class="btn btn-outline-dark fw-bold" href="contact.html">Contact</a>
@@ -277,136 +115,155 @@
     </div>
 </nav>
 <main class="mt-4 mb-5">
-    <div class="main"> <!--style="width: 95%; position: center"-->
-        <div class="text-center">
-            <h2>Mon profil</h2>
+    <div class="main">
+        <div class="text-center mb-5">
+            <h2>Tableau de synthèse</h2>
+            <iframe style="width: 150vh; height:  80vh" src="doc/synthese/Tableau_de_synthese-epreuve-E4.pdf" frameborder="0"></iframe>
         </div>
-        <div>
-            <div class="mt-5">
-                <div class="text-center">
-                    <img src="doc/photo.jpg" class="rounded-circle" width="350px">
-                </div>
 
-            </div>
-            <div class="text-center mt-5">
-                <div class="col-md-8 mx-auto">
-                    Je m'appelle Alexandre DOMINGUES, j'ai 22 ans et suis actuellement étudiant en 2ème année du BTS SIO
-                    option SLAM à l’école Ipssi Marne la valée.
-                    Intéressée par l’informatique et en particulier, par la programmation, j’ai choisi de me spécialiser
-                    dans le développement d’application à travers l’option SLAM du BTS.
-
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <div class="col-md-8 mx-auto">
-                    <em>Mon parcours après le BTS</em>: J'aimerai poursuivre mes études en
-                    école d’ingénieur, à l’Esiee Paris, afin d'acquérir des connaissances beaucoup plus poussées en
-                    ingénierie informatique et valider obtenir ainsi un diplôme d’ingénieur en ingénierie 3D et
-                    technologie des médias.
-
-                </div>
-            </div>
-        </div>
         <div class="mt-5">
-
             <div class="text-center">
-                <h2>Compétences</h2>
+                <h2>Documentation</h2>
             </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center">
-
-                        <h3> Langages </h3>
-
-                        <div class="oneskill">
-                            <p>HTML5</p>
-                            <div class="box">
-                                <div class="skills html"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-                            <p>CSS3</p>
-                            <div class="box">
-                                <div class="skills css"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-                            <p>JavaScript</p>
-                            <div class="box">
-                                <div class="skills js"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-                            <p>Java</p>
-                            <div class="box">
-                                <div class="skills java"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-                            <p>Python</p>
-                            <div class="box">
-                                <div class="skills python"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 text-center">
-                        <h3> Frameworks </h3>
-
-                        <div class="oneskill">
-
-                            <p>Bootstrap</p>
-                            <div class="box">
-                                <div class="skills bootstrap"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-
-                            <p>jQuery</p>
-                            <div class="box">
-                                <div class="skills jquery"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-
-                            <p>React.js</p>
-                            <div class="box">
-                                <div class="skills react"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-
-                            <p>Symfony</p>
-                            <div class="box">
-                                <div class="skills symfony"></div>
-                            </div>
-                        </div>
-
-                    </div>
+            <ul style="padding-top:20px; padding-bottom:5px">
+                <pre style="width:97%"> Organiser son développement professionnel : </pre>
+                <div style="padding-left:2rem">
+                    <li>
+                        <button id="portfolio"> Portfolio</button>
+                    </li>
+                    <li>
+                        <button id="outil-alerte"> Outils d'alerte</button>
+                    </li>
+                    <li>
+                        <button id="developper-projet-pro">
+                            Développer son projet professionnel
+                        </button>
+                    </li>
                 </div>
+            </ul>
 
-            </div>
-            <div class="mt-5">
-                <div class="text-center">
-                    <h2>Mes projets</h2>
+            <ul style="padding-top:20px; padding-bottom:5px">
+                <pre style="width:97%"> Travailler en mode projet : </pre>
+                <div style="padding-left:2rem">
+                    <li>
+                        <button id="ap2"> AP2</button>
+                    </li>
                 </div>
-            </div>
+            </ul>
+
+            <ul style="padding-top:20px; padding-bottom:5px">
+                <pre style="width:97%"> Développer la présence en ligne de l’organisation : </pre>
+                <div style="padding-left:2rem">
+                    <li>
+                        <button id="ap1"> AP1</button>
+                    </li>
+                    <li>
+                        <button id="service-en-ligne"> Référencer les services en ligne de l'organisation et mesurer
+                            leur visibilité
+                        </button>
+                    </li>
+                </div>
+            </ul>
+
+            <ul style="padding-top:20px; padding-bottom:5px">
+                <pre style="width:97%"> Gérer le patrimoine informatique : </pre>
+                <div style="padding-left:2rem">
+                    <li>
+                        <button id="inventaire"> Inventaire matériel</button>
+                    </li>
+                    <li>
+                        <button id="habilitation"> Mettre en place et vérifier les niveaux d'habilitation associés à un
+                            service
+                        </button>
+                    </li>
+                </div>
+            </ul>
         </div>
     </div>
-
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 <script>
+    $("#portfolio").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/Organiser%20son%20développement%20professionnel.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#portfolio").parent().parent().append(div);
+    })
+
+    $("#outil-alerte").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/Mettre%20en%20oeuvre%20des%20outils%20de%20veille%20informationnelle.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#outil-alerte").parent().parent().append(div);
+    })
+
+    $("#developper-projet-pro").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/DÉVELOPPER%20SON%20PROJET%20PROFESSIONNEL.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#developper-projet-pro").parent().parent().append(div);
+    })
+
+    $("#ap2").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/ANALYSER%20LES%20OBJECTIFS%20ET%20LES%20MODALITÉS%20D’ORGANISATION%20D’UN%20PROJET.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#ap2").parent().parent().append(div);
+    })
+
+    $("#ap1").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/PARTICIPER%20A%20LA%20VALORISATION%20DE%20L'IMAGE%20DE%20L'ORGANISATION.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#ap1").parent().parent().append(div);
+    })
+
+    $("#service-en-ligne").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/RÉFÉRENCER%20LES%20SERVICES%20EN%20LIGNE%20DE%20L’ORGANISATION%20ET%20MESURER%20LEUR%20VISIBILITÉ.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#service-en-ligne").parent().parent().append(div);
+    })
+
+    $("#inventaire").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/inventaire_materiel.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#inventaire").parent().parent().append(div);
+    })
+
+    $("#habilitation").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/METTRE%20EN%20PLACE%20ET%20VÉRIFIER%20LES%20NIVEAUX%20D’HABILITATION%20ASSOCIÉS%20À%20UN%20SERVICE.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#habilitation").parent().parent().append(div);
+    })
     $(document).ready(() => {
         let typingElement = $('.typing');
 
@@ -608,9 +465,9 @@
                     <div class="col-md-2">
                         <a href="https://www.linkedin.com/in/alexandre-domingues-07039a178/"
                            title="Cliquer pour accéder à mon LinkedIn"><i
-                                class="bi bi-linkedin"></i></a>
+                                    class="bi bi-linkedin"></i></a>
                         <a href="https://github.com/LLexxs" title="Cliquer pour accéder à mon Github"><i
-                                class="bi bi-github"></i></a>
+                                    class="bi bi-github"></i></a>
                         <a href="https://www.instagram.com/alex_dmgs/?hl=fr"
                            title="Cliquer pour accéder à mon Instagram"><i class="bi bi-instagram"></i></a>
 
@@ -621,9 +478,9 @@
                     </div>
                     <div class="col-md-2">
                         <a href="mailto:alexandre.domingues77@gmail.com" title="Cliquer pour m'envoyer un mail"><i
-                                class="bi bi-envelope-plus"></i></a>
+                                    class="bi bi-envelope-plus"></i></a>
                         <a href="tel:+33628470759" title="Cliquer pour me téléphoner"><i
-                                class="bi bi-telephone"></i></a>
+                                    class="bi bi-telephone"></i></a>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-2"></div>

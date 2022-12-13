@@ -28,190 +28,11 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <title>Mon profil - Portfolio</title>
+    <title>Veille technologique - Portfolio</title>
 </head>
 <body>
 
 <style>
-    .box {
-        width: 250px;
-        background-color: #ddd;
-        margin-left: 10vw;
-        border-radius: 2000px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    .skills {
-        text-align: right;
-        padding-top: 2vh;
-        padding-bottom: 1vh;
-        color: white;
-        border-radius: 2000px;
-        animation-duration: 0.7s;
-        animation-timing-function: ease;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes html {
-        from {
-            width: 0;
-        }
-        to {
-            width: 85%;
-            background-color: #4caf50;
-        }
-    }
-
-    @keyframes css {
-        from {
-            width: 0;
-        }
-        to {
-            width: 85%;
-            background-color: #2196f3;
-        }
-    }
-
-    @keyframes js {
-        from {
-            width: 0;
-        }
-        to {
-            width: 65%;
-            background-color: #f44336;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes java {
-        from {
-            width: 0;
-        }
-        to {
-            width: 70%;
-            background-color: #5382a1;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes python {
-        from {
-            width: 0;
-        }
-        to {
-            width: 55%;
-            background-color: #ffd43b;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes bootstrap {
-        from {
-            width: 0;
-        }
-        to {
-            width: 70%;
-            background-color: #563d7c;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes jquery {
-        from {
-            width: 0;
-        }
-        to {
-            width: 60%;
-            background-color: #0769ad;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes react {
-        from {
-            width: 0;
-        }
-        to {
-            width: 60%;
-            background-color: #61dbfb;
-            border-radius: 2000px;
-        }
-    }
-
-    @keyframes symfony {
-        from {
-            width: 0;
-        }
-        to {
-            width: 70%;
-            background-color: lightgreen;
-            border-radius: 2000px;
-        }
-    }
-
-    .html {
-        animation-name: html;
-    }
-
-    .css {
-        animation-name: css;
-    }
-
-    .js {
-        animation-name: js;
-    }
-
-    .java {
-        animation-name: java;
-    }
-
-    .python {
-        animation-name: python;
-    }
-
-    .bootstrap {
-        animation-name: bootstrap;
-    }
-
-    .jquery {
-        animation-name: jquery;
-    }
-
-    .react {
-        animation-name: react;
-    }
-
-    .symfony {
-        animation-name: symfony;
-    }
-
-    .container {
-        margin-top: 6%;
-    }
-
-    .oneskill p {
-        font-size: 130%;
-        position: relative;
-    }
-
-    .oneskill {
-        margin-top: 5vh;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .box {
-            margin-left: 20vw;
-            width: 55vw;
-        }
-    }
-
-    @media only screen and (min-width: 600px) and (max-width: 768px) {
-        .box {
-            margin-left: 20vw;
-            width: 40vw;
-        }
-    }
-
 
 </style>
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -247,7 +68,7 @@
                     <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="mon_profil.html">Mon profil</a>
+                    <a class="nav-link" href="mon_profil.html">Mon profil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="formation.html">Formation</a>
@@ -256,12 +77,12 @@
                     <a class="nav-link" href="apprentissage.html">Apprentissage</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         Veilles
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="veille_technologique.html">Veille technologique</a></li>
+                        <li><a class="dropdown-item active" href="veille_technologique.html">Veille technologique</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -277,131 +98,164 @@
     </div>
 </nav>
 <main class="mt-4 mb-5">
-    <div class="main"> <!--style="width: 95%; position: center"-->
-        <div class="text-center">
-            <h2>Mon profil</h2>
+    <div class="main">
+        <div class="text-center mb-5">
+            <h2>Veille technologique </h2>
         </div>
         <div>
-            <div class="mt-5">
-                <div class="text-center">
-                    <img src="doc/photo.jpg" class="rounded-circle" width="350px">
-                </div>
+            <article class="col-md-8 mx-auto text-justify">
+                <div class="text-center"><h3>Le framework symfony</h3></div>
 
-            </div>
-            <div class="text-center mt-5">
-                <div class="col-md-8 mx-auto">
-                    Je m'appelle Alexandre DOMINGUES, j'ai 22 ans et suis actuellement étudiant en 2ème année du BTS SIO
-                    option SLAM à l’école Ipssi Marne la valée.
-                    Intéressée par l’informatique et en particulier, par la programmation, j’ai choisi de me spécialiser
-                    dans le développement d’application à travers l’option SLAM du BTS.
+                <div class="mt-2">
+                    <div>
+                        Symfony est un ensemble de composants PHP, un framework pour application web basé sur
+                        l’architecture
+                        MVC. J’ai choisi ce thème pour ma veille car le développement web m’intéresse beaucoup et ce
+                        framework, qui m’a beaucoup servit pour mon stage de deuxième année, est l’un des plus utilisés
+                        par les professionnels. Sa création a été lancé en octobre 2005 SensioLabs pour ses propres
+                        besoinset a ensuite souhaité partager le code avec la communauté des développeurs PHP.
+                        <br> Fonctionnement de l’architecture MVC :
+                        <img src="doc/mvc.png" class="mx-auto">
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-center mb-3"><h5>Pré-requis matérielles et logicielles </h5></div>
+                        <ul>
+                            <li>Serveur Apache, PHP et MySQL : WAMP/XAMP/LAMP ou machine virtuelle distante (Installer
+                                putty
+                                et winScp/filezilla pour ce choix et pour Windows)
+                            </li>
+                            <li>Un éditeur de text (Sublime Text, NotPad++, PHPStorm …)</li>
+                        </ul>
 
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <div class="col-md-8 mx-auto">
-                    <em>Mon parcours après le BTS</em>: J'aimerai poursuivre mes études en
-                    école d’ingénieur, à l’Esiee Paris, afin d'acquérir des connaissances beaucoup plus poussées en
-                    ingénierie informatique et valider obtenir ainsi un diplôme d’ingénieur en ingénierie 3D et
-                    technologie des médias.
-
-                </div>
-            </div>
-        </div>
-        <div class="mt-5">
-
-            <div class="text-center">
-                <h2>Compétences</h2>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center">
-
-                        <h3> Langages </h3>
-
-                        <div class="oneskill">
-                            <p>HTML5</p>
-                            <div class="box">
-                                <div class="skills html"></div>
-                            </div>
+                        <h5>Avantages </h5>
+                        <ul>
+                            <li>Open source : Symfony est distribué sous une licence Open Source, vous n’avez donc pas
+                                de
+                                contraintes imposées et cela vous permet le développement de solutions propriétaires.
+                            </li>
+                            <li>Grande communauté d’utilisateurs : Avec une forte utilisation par les professionnels et
+                                une
+                                grande communauté de développeurs ayant utilisé Symfony, il est plus facile de trouver
+                                des
+                                réponses à des problèmes qu’avec d’autres frameworks.
+                            </li>
+                            <li>Gain de temps et qualité optimisée : Par l’utilisation de composants déjà existants, on
+                                supprime les tâches à faible valeur ajoutée pour se concentrer exclusivement sur des
+                                aspects
+                                plus complexes. Le temps gagné sur ces tâches peut être dédié à des composants plus
+                                spécifiques ou à des tests en profondeur, vous garantissant ainsi un code plus solide,
+                                durable et un projet de bonne qualité.
+                            </li>
+                        </ul>
+                        <h5>Inconvénients </h5>
+                        <ul>
+                            <li>L’apprentissage complexe et lourde : Apprendre un framework nécessite de temps et de la
+                                patience. Symfony ne fait pas exception et demande un temps d’apprentissage important.
+                                Symfony est quand même un ensemble de composants important qu’il faut savoir maîtriser
+                                (moteur de templates …).
+                            </li>
+                            <li>Coder en Symfony, un autre langage : Il est vrai que Symfony est un framework PHP mais
+                                il
+                                faut connaitre un minimum d’autres langages pour m’utiliser (twig pour les vues, yml
+                                pour
+                                les config, le routing …). Programmer en Symfony signifie rester strictement sur
+                                l’architecture du MVC certes mais celui propre à Symfony. Pour déboguer, on sait déjà
+                                que
+                                cela peut devenir difficile.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-center mb-3"><h5>Découpage des répertoires : </h5></div>
+                        <br>/app : on y trouve les fichiers de configurations, les paramètres et le cache<br>
+                        <br>/src : c’est ici qu’est le code source (sous forme de bundles : des dossiers qui découpent
+                        le
+                        code
+                        afin de faciliter sa lecture)<br>
+                        <br>/web : Contrôleurs frontaux app.php et app_dev.php ainsi sue les fichiers de CSS<br>
+                        <br>/vendor : les composants : Doctrine, Twig …
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-center mb-3"><h5>Le routing </h5></div>
+                        Une chose importante à savoir, Symfony fonctionne grâce à un système de « route ». C’est à
+                        dire que chaque fonction créée a une route unique, ce qui permet d’exécuter la fonction
+                        correspondante à la route passée dans l’URL. Les routes sont définies dans le fichier «
+                        routing.yml
+                        »
+                        situé dans le dossier « /app/config/ ».<br>
+                        <br>Par exemple :<br>
+                        <br>hello_the_world:<br>
+                        path: /hello-world<br>
+                        defaults: { _controller: TestBundle:Test:index }<br>
+                        <br>Ici, l’url « www.sitetest.fr/hello-world » redirige vers la fonction « index »
+                        du contrôleur « TestController » du bundle « TestBundle ».
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-center mb-3"><h5>Les contrôleurs </h5></div>
+                        Comme dit précédemment, Symfony respecte le modèle MVC et le PHP objet, ainsi le contrôleur est
+                        le «
+                        chef
+                        d’orchestre » de l’application. Chaque bundle a donc son propre contrôleur avec souvent
+                        plusieurs contrôleurs dans un seul bundle.
+                        Par exemple :
+                        <div class="mt-3 mb-3 border border-dark py-2 px-2">
+                            &lt;?PHP
+                            <br>namespace Test\TestBundle\Controller;
+                            <br>useSymfont\Bundle\FrameworkBundle\Controller\Contreoller;
+                            <br>useSymfony\Component\HttpFounddation\Response;
+                            <br>classTestController extends Controller
+                            {
+                            <br>&emsp;public function indexAction()
+                            {
+                            <br>&emsp;&emsp;$hello = « Hello world »;
+                            <br>&emsp;&emsp;return $this-&gt;render(‘TestBundle:hello:hello.html.twig’,
+                            array(‘hello’ =&gt; $hello));
+                            <br>&emsp;}
+                            <br>}
                         </div>
-
-                        <div class="oneskill">
-                            <p>CSS3</p>
-                            <div class="box">
-                                <div class="skills css"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-                            <p>JavaScript</p>
-                            <div class="box">
-                                <div class="skills js"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-                            <p>Java</p>
-                            <div class="box">
-                                <div class="skills java"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-                            <p>Python</p>
-                            <div class="box">
-                                <div class="skills python"></div>
-                            </div>
+                        Ici, la fonction indexAction() permet de générer la page « hello.html.twig » en lui
+                        donnant la variable « $hello » définie juste avant.
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-center mb-3"><h5>Les templates </h5></div>
+                        Symfony inclut un moteur de templates, Twig, les vues sont donc générées grâce à ce moteur. Les
+                        vues
+                        permettent au webdesigner d’avoir un code plus lisible et de sécuriser les variables
+                        automatiquement.
+                        Par exemple :
+                        <div class="mt-3 border border-dark py-2 px-2">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&emsp;&lt;html&gt;
+                            <br>&emsp;&emsp;&lt;head&gt;
+                            <br>&emsp;&emsp;&emsp;&lt;title&gt;Hello world&lt;/title&gt;
+                            <br>&emsp;&emsp;&lt;/head&gt;
+                            <br>&emsp;&emsp;&lt;body&gt;
+                            <br>&emsp;&emsp;&emsp;&lt;h1&gt;{{ hello }}&lt;/h1&gt; //On affiche le contenu de la
+                            variable $hello
+                            <br>&emsp;&emsp;&lt;/body&gt;
+                            <br>&emsp;&lt;/html&gt;
                         </div>
                     </div>
-
-                    <div class="col-md-6 text-center">
-                        <h3> Frameworks </h3>
-
-                        <div class="oneskill">
-
-                            <p>Bootstrap</p>
-                            <div class="box">
-                                <div class="skills bootstrap"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-
-                            <p>jQuery</p>
-                            <div class="box">
-                                <div class="skills jquery"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-
-                            <p>React.js</p>
-                            <div class="box">
-                                <div class="skills react"></div>
-                            </div>
-                        </div>
-
-                        <div class="oneskill">
-
-                            <p>Symfony</p>
-                            <div class="box">
-                                <div class="skills symfony"></div>
-                            </div>
-                        </div>
-
+                    <div class="mt-4">
+                        <div class="text-center mb-3"><h5>Doctrine </h5></div>
+                        Doctrine est un ORM (Object Relation Manager), son but est donc de permette à l’utilisateur de
+                        communiquer avec une base de données au travers d’objets (créés grâce au PHP) sans avoirt besoin
+                        d’écrire les requêtes SQL. Doctrine permet aussi la création d’entités. Elles pourront être
+                        utilisées comme objet en PHP et Doctrine se sert ces entités pour générer la base de donner
+                        automatiquement (une entité = une table dans la base de données).
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-center mb-3"><h5>Sources </h5></div>
+                        <a class="link-dark" href="http://symfony.com/doc/current/index.html" rel="nofollow">Documentation - Symfony</a>
+                        <br><a class="link-dark" href="https://fr.wikipedia.org/wiki/Symfony"
+                               rel="nofollow">Wikipedia - Symfony</a>
+                        <br><a class="link-dark" href="https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony2/symfony2-un-framework-php"
+                               rel="nofollow">Open classrooms - Symfony</a>
                     </div>
                 </div>
-
-            </div>
-            <div class="mt-5">
-                <div class="text-center">
-                    <h2>Mes projets</h2>
-                </div>
-            </div>
+            </article>
         </div>
     </div>
-
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
