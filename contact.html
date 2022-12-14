@@ -1,9 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Bootstrap Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+
+    <!-- Portfolio CSS -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/footer.scss">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Synthèse - Portfolio</title>
+</head>
+<body>
 <style>
-    .letter {
-        width: 0.75rem;
+    @media only screen and (min-width: 800px) {
+        h1 {
+            font-size: 6em;
+        }
+
+        p {
+            font-size: 1.6em;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        h1 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
     }
 </style>
-
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="index.html" style="position: absolute; left: 1em;">
@@ -55,55 +104,35 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="veille_juridique.php">Veille juridique</a></li>
+                        <li><a class="dropdown-item" href="veille_juridique.html">Veille juridique</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="synthese.html">Synthèse</a>
+                    <a class="nav-link active" href="synthese.html">Synthèse</a>
                 </li>
             </ul>
             <a class="btn btn-outline-dark fw-bold" href="contact.html">Contact</a>
         </div>
     </div>
 </nav>
+<div class="main">
+    <div class="text-center mt-5">
+        <h1>COMING SOON</h1>
+        <p>Mon portfolio est en travaux</p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 <script>
-    let path = window.location.pathname.split("/").pop();
-    if (path == '') {
-        window.location.replace("index.php")
-    }
-    ;
-    console.log(path);
-    switch (path) {
-        case 'index.php' :
-            $('.nav-item > .nav-link').parent().removeClass('active');
-            $('a[href="' + path + '"]').addClass('active');
+    $(document).ready(() => {
+        let typingElement = $('.typing');
 
-        case '' :
-            $('.nav-item > .nav-link').parent().removeClass('active');
-            $('a[href="index.php"]').addClass('active');
-
-        case 'mon_profil.php' :
-            $('.nav-item > .nav-link').parent().removeClass('active');
-            $('a[href="' + path + '"]').addClass('active');
-
-        case 'formation.php' :
-            $('.nav-item > .nav-link').parent().removeClass('active');
-            $('a[href="' + path + '"]').addClass('active');
-
-        case 'synthese.php' :
-            $('.nav-item > .nav-link').parent().removeClass('active');
-            $('a[href="' + path + '"]').addClass('active');
-
-        case 'contact.php' :
-            $('.nav-item > .nav-link').parent().removeClass('active');
-            $('a[href="' + path + '"]').addClass('active');
-
-        case 'apprentissage.php' :
-            $('.nav-item > .nav-link').parent().removeClass('active');
-            $('a[href="' + path + '"]').addClass('active');
-
-    }
+        typingElement.on('click', (e) => {
+            typingElement.removeClass('animate');
+            setTimeout(() => typingElement.addClass('animate'), 1);
+        })
+    });
 
     Letters = function () {
         this.lettersDOM = null;
@@ -276,3 +305,51 @@
 
     }, 2000);
 </script>
+
+
+<footer>
+    <div class="footer">
+        <div class="content">
+            <div class="col-md-12 text-center">
+                <div class="row text-decoration-underline">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">Mes réseaux</div>
+                    <div class="col-md-2">Mon CV</div>
+                    <div class="col-md-2">Me contacter</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <a href="https://www.linkedin.com/in/alexandre-domingues-07039a178/"
+                           title="Cliquer pour accéder à mon LinkedIn"><i
+                                    class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/LLexxs" title="Cliquer pour accéder à mon Github"><i
+                                    class="bi bi-github"></i></a>
+                        <a href="https://www.instagram.com/alex_dmgs/?hl=fr"
+                           title="Cliquer pour accéder à mon Instagram"><i class="bi bi-instagram"></i></a>
+
+                    </div>
+                    <div class="col-md-2">
+                        <a href="./doc/CV_Alexandre_DOMINGUES.pdf" download="CV Alexandre DOMINGUES"
+                           title="Cliquer pour télécharger"><i class="bi bi-file-earmark-person"></i></a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="mailto:alexandre.domingues77@gmail.com" title="Cliquer pour m'envoyer un mail"><i
+                                    class="bi bi-envelope-plus"></i></a>
+                        <a href="tel:+33628470759" title="Cliquer pour me téléphoner"><i
+                                    class="bi bi-telephone"></i></a>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
