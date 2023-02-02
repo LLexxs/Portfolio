@@ -119,7 +119,8 @@
     <div class="main">
         <div class="text-center mb-5">
             <h2>Tableau de synthèse</h2>
-            <iframe style="width: 150vh; height:  80vh" src="doc/synthese/Tableau_de_synthese-epreuve-E4.pdf" frameborder="0"></iframe>
+            <iframe style="width: 150vh; height:  80vh" src="doc/synthese/Tableau_de_synthese-epreuve-E4.pdf"
+                    frameborder="0"></iframe>
         </div>
 
         <div class="mt-5">
@@ -139,6 +140,15 @@
                         <button id="developper-projet-pro">
                             Développer son projet professionnel
                         </button>
+                    </li>
+                </div>
+            </ul>
+
+            <ul style="padding-top:20px; padding-bottom:5px">
+                <pre style="width:97%"> Répondre aux incidents et aux demandes d’assistance et d’évolution : </pre>
+                <div style="padding-left:2rem">
+                    <li>
+                        <button id="glpi"> GLPI</button>
                     </li>
                 </div>
             </ul>
@@ -266,6 +276,17 @@
         $("#doc").remove();
         $("#habilitation").parent().parent().append(div);
     })
+
+    $("#glpi").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/DocumentaionGlpi.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#habilitation").parent().parent().append(div);
+    })
+
     $(document).ready(() => {
         let typingElement = $('.typing');
 
@@ -467,9 +488,9 @@
                     <div class="col-md-2">
                         <a href="https://www.linkedin.com/in/alexandre-domingues-07039a178/"
                            title="Cliquer pour accéder à mon LinkedIn"><i
-                                    class="bi bi-linkedin"></i></a>
+                                class="bi bi-linkedin"></i></a>
                         <a href="https://github.com/LLexxs" title="Cliquer pour accéder à mon Github"><i
-                                    class="bi bi-github"></i></a>
+                                class="bi bi-github"></i></a>
                         <a href="https://www.instagram.com/alex_dmgs/?hl=fr"
                            title="Cliquer pour accéder à mon Instagram"><i class="bi bi-instagram"></i></a>
 
@@ -480,9 +501,9 @@
                     </div>
                     <div class="col-md-2">
                         <a href="mailto:alexandre.domingues77@gmail.com" title="Cliquer pour m'envoyer un mail"><i
-                                    class="bi bi-envelope-plus"></i></a>
+                                class="bi bi-envelope-plus"></i></a>
                         <a href="tel:+33628470759" title="Cliquer pour me téléphoner"><i
-                                    class="bi bi-telephone"></i></a>
+                                class="bi bi-telephone"></i></a>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-2"></div>
