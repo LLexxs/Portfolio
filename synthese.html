@@ -157,7 +157,10 @@
                 <pre style="width:97%"> Travailler en mode projet : </pre>
                 <div style="padding-left:2rem">
                     <li>
-                        <button id="ap2"> AP2</button>
+                        <button id="ap2"> Analyser les objectifs et les modalités d'organisation d'un projet</button>
+                    </li>
+                    <li>
+                        <button id="gantt"> Planifier les activités</button>
                     </li>
                 </div>
             </ul>
@@ -166,11 +169,17 @@
                 <pre style="width:97%"> Développer la présence en ligne de l’organisation : </pre>
                 <div style="padding-left:2rem">
                     <li>
-                        <button id="ap1"> AP1</button>
+                        <button id="ap1"> Participer à la valorisation de l'image de l'organisation sur les médias
+                            numériques en tenant compte du cadre juridique et des enjeux économiques
+                        </button>
                     </li>
                     <li>
                         <button id="service-en-ligne"> Référencer les services en ligne de l'organisation et mesurer
                             leur visibilité
+                        </button>
+                        <button id="m2l-web1"> Application M2L web
+                        </button>
+                        <button id="m2l-mobile1"> Application M2L mobile
                         </button>
                     </li>
                 </div>
@@ -186,7 +195,20 @@
                         <button id="habilitation"> Mettre en place et vérifier les niveaux d'habilitation associés à un
                             service
                         </button>
+                        <button id="save"> Gérer des sauvegardes
+                        </button>
                     </li>
+                </div>
+            </ul>
+            <ul style="padding-top:20px; padding-bottom:5px">
+                <pre style="width:97%"> Mettre à disposition des utilisateurs un service informatique : </pre>
+                <div style="padding-left:2rem">
+                    <button id="tests"> Réaliser des tests d'intégration et d'acceptation d'un service
+                    </button>
+                    <button id="m2l-web2"> Application M2L web
+                    </button>
+                    <button id="m2l-mobile2"> Application M2L mobile
+                    </button>
                 </div>
             </ul>
         </div>
@@ -285,6 +307,76 @@
             </div>`
         $("#doc").remove();
         $("#glpi").parent().parent().append(div);
+    })
+
+    $("#m2l-mobile1").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/Documentation%20M2L%20mobile.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#m2l-mobile1").parent().parent().append(div);
+    })
+
+    $("#m2l-mobile2").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/Documentation%20M2L%20mobile.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#m2l-mobile2").parent().parent().append(div);
+    })
+
+    $("#m2l-web1").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/Documentation%20M2L%20web.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#m2l-web1").parent().parent().append(div);
+    })
+
+    $("#m2l-web2").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/Documentation%20M2L%20web.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#m2l-web2").parent().parent().append(div);
+    })
+
+    $("#gantt").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/PLANIFIER%20LES%20ACTIVITÉS.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#gantt").parent().parent().append(div);
+    })
+
+    $("#tests").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/RÉALISER%20LES%20TESTS%20D'INTÉGRATION%20ET%20D'ACCEPTATION%20D'UN%20SERVICE.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#tests").parent().parent().append(div);
+    })
+
+    $("#save").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/MISE%20EN%20PLACE%20D’UN%20SERVEUR%20NODEJS%20AVEC%20UNE%20BASE%20DE%20DONNÉES%20SUR%20LINUX.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#save").parent().parent().append(div);
     })
 
     $(document).ready(() => {
