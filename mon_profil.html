@@ -58,7 +58,7 @@
             width: 0;
         }
         to {
-            width: 85%;
+            width: 95%;
             background-color: #4caf50;
         }
     }
@@ -73,12 +73,22 @@
         }
     }
 
+    @keyframes php {
+        from {
+            width: 0;
+        }
+        to {
+            width: 75%;
+            background-color: #f211ff;
+        }
+    }
+
     @keyframes js {
         from {
             width: 0;
         }
         to {
-            width: 65%;
+            width: 75%;
             background-color: #f44336;
             border-radius: 2000px;
         }
@@ -89,7 +99,7 @@
             width: 0;
         }
         to {
-            width: 70%;
+            width: 80%;
             background-color: #5382a1;
             border-radius: 2000px;
         }
@@ -100,7 +110,7 @@
             width: 0;
         }
         to {
-            width: 55%;
+            width: 65%;
             background-color: #ffd43b;
             border-radius: 2000px;
         }
@@ -111,7 +121,7 @@
             width: 0;
         }
         to {
-            width: 70%;
+            width: 80%;
             background-color: #563d7c;
             border-radius: 2000px;
         }
@@ -122,7 +132,7 @@
             width: 0;
         }
         to {
-            width: 60%;
+            width: 70%;
             background-color: #0769ad;
             border-radius: 2000px;
         }
@@ -133,7 +143,7 @@
             width: 0;
         }
         to {
-            width: 60%;
+            width: 65%;
             background-color: #61dbfb;
             border-radius: 2000px;
         }
@@ -144,8 +154,85 @@
             width: 0;
         }
         to {
-            width: 70%;
+            width: 80%;
             background-color: lightgreen;
+            border-radius: 2000px;
+        }
+    }
+
+    @keyframes flutter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 40%;
+            background-color: #844bff;
+            border-radius: 2000px;
+        }
+    }
+
+    @keyframes sql {
+        from {
+            width: 0;
+        }
+        to {
+            width: 80%;
+            background-color: #be4f00;
+            border-radius: 2000px;
+        }
+    }
+
+    @keyframes phpStorm {
+        from {
+            width: 0;
+        }
+        to {
+            width: 70%;
+            background-color: #2f6501;
+            border-radius: 2000px;
+        }
+    }
+
+    @keyframes git {
+        from {
+            width: 0;
+        }
+        to {
+            width: 85%;
+            background-color: #4bffd5;
+            border-radius: 2000px;
+        }
+    }
+
+    @keyframes anglais {
+        from {
+            width: 0;
+        }
+        to {
+            width: 85%;
+            background-color: #001052;
+            border-radius: 2000px;
+        }
+    }
+
+    @keyframes portugal {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+            background-color: #4f0505;
+            border-radius: 2000px;
+        }
+    }
+
+    @keyframes espagne {
+        from {
+            width: 0;
+        }
+        to {
+            width: 95%;
+            background-color: #5e551c;
             border-radius: 2000px;
         }
     }
@@ -156,6 +243,10 @@
 
     .css {
         animation-name: css;
+    }
+
+    .php {
+        animation-name: php;
     }
 
     .js {
@@ -184,6 +275,34 @@
 
     .symfony {
         animation-name: symfony;
+    }
+
+    .flutter {
+        animation-name: flutter;
+    }
+
+    .sql {
+        animation-name: sql;
+    }
+
+    .phpStorm {
+        animation-name: phpStorm;
+    }
+
+    .git {
+        animation-name: git;
+    }
+
+    .anglais {
+        animation-name: anglais;
+    }
+
+    .portugal {
+        animation-name: portugal;
+    }
+
+    .espagne {
+        animation-name: espagne;
     }
 
     .container {
@@ -300,9 +419,9 @@
             </div>
             <div class="text-center mt-5">
                 <div class="col-md-8 mx-auto">
-                    <em>Mon parcours après le BTS</em>: J'aimerai poursuivre mes études en
+                    <em>Mon parcours après le BTS</em>: J'aimerais poursuivre mes études en
                     école d’ingénieur, à l’Esiee Paris, afin d'acquérir des connaissances beaucoup plus poussées en
-                    ingénierie informatique et valider obtenir ainsi un diplôme d’ingénieur en ingénierie 3D et
+                    ingénierie informatique et pouvoir obtenir ainsi un diplôme d’ingénieur en ingénierie 3D et
                     technologie des médias.
 
                 </div>
@@ -331,6 +450,13 @@
                             <p>CSS3</p>
                             <div class="box">
                                 <div class="skills css"></div>
+                            </div>
+                        </div>
+
+                        <div class="oneskill">
+                            <p>PHP8</p>
+                            <div class="box">
+                                <div class="skills php"></div>
                             </div>
                         </div>
 
@@ -391,11 +517,75 @@
                             </div>
                         </div>
 
+                        <div class="oneskill">
+
+                            <p>Flutter</p>
+                            <div class="box">
+                                <div class="skills flutter"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-6 text-center">
+                        <h3> BDD et environnement </h3>
+                        <div class="oneskill">
+
+                            <p>MySQL</p>
+                            <div class="box">
+                                <div class="skills sql"></div>
+                            </div>
+                        </div>
+
+                        <div class="oneskill">
+
+                            <p>PhpStorm</p>
+                            <div class="box">
+                                <div class="skills phpStorm"></div>
+                            </div>
+                        </div>
+
+                        <div class="oneskill">
+
+                            <p>Git, github</p>
+                            <div class="box">
+                                <div class="skills git"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                        <h3> Langues </h3>
+                        <div class="oneskill">
+
+                            <p>Anglais</p>
+                            <div class="box">
+                                <div class="skills anglais"></div>
+                            </div>
+                        </div>
+
+                        <div class="oneskill">
+
+                            <p>Portugais</p>
+                            <div class="box">
+                                <div class="skills portugal"></div>
+                            </div>
+                        </div>
+
+                        <div class="oneskill">
+
+                            <p>Espagnol </p>
+                            <div class="box">
+                                <div class="skills espagne"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <div class="mt-5">
+            <!--<div class="mt-5">
                 <div class="text-center">
                     <h2>Mes projets</h2>
                 </div>
@@ -432,7 +622,7 @@
                             </div>
                         </div>
                     </div>
-            </div>
+            </div>-->
         </div>
     </div>
 
