@@ -240,174 +240,225 @@
 
 <script>
     $("#portfolio").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/Organiser%20son%20développement%20professionnel.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#portfolio").parent().parent().append(div);
+            $("#portfolio").parent().parent().append(div);
+        }
     })
 
     $("#outil-alerte").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/Mettre%20en%20oeuvre%20des%20outils%20de%20veille%20informationnelle.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#outil-alerte").parent().parent().append(div);
+            $("#outil-alerte").parent().parent().append(div);
+        }
     })
 
     $("#developper-projet-pro").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/DÉVELOPPER%20SON%20PROJET%20PROFESSIONNEL.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#developper-projet-pro").parent().parent().append(div);
+            $("#developper-projet-pro").parent().parent().append(div);
+        }
     })
 
     $("#ap2").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/ANALYSER%20LES%20OBJECTIFS%20ET%20LES%20MODALITÉS%20D’ORGANISATION%20D’UN%20PROJET.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#ap2").parent().parent().append(div);
+            $("#ap2").parent().parent().append(div);
+        }
     })
 
     $("#ap1").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/PARTICIPER%20A%20LA%20VALORISATION%20DE%20L'IMAGE%20DE%20L'ORGANISATION.pdf"
                         frameborder="0"></iframe> <br>
                         <a class="bg-dark link-dark text-white px-2 rounded" href="https://dodq1g.github.io/TAF/index.html">Site de l'AP1</a>
             </div>`
-        $("#doc").remove();
-        $("#ap1").parent().parent().append(div);
+            $("#ap1").parent().parent().append(div);
+        }
     })
 
     $("#service-en-ligne").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/RÉFÉRENCER%20LES%20SERVICES%20EN%20LIGNE%20DE%20L’ORGANISATION%20ET%20MESURER%20LEUR%20VISIBILITÉ.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#service-en-ligne").parent().parent().append(div);
+            $("#service-en-ligne").parent().parent().append(div);
+        }
     })
 
     $("#inventaire").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/inventaire_materiel.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#inventaire").parent().parent().append(div);
+            $("#inventaire").parent().parent().append(div);
+        }
     })
 
     $("#habilitation").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/METTRE%20EN%20PLACE%20ET%20VÉRIFIER%20LES%20NIVEAUX%20D’HABILITATION%20ASSOCIÉS%20À%20UN%20SERVICE.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#habilitation").parent().parent().append(div);
+            $("#habilitation").parent().parent().append(div);
+        }
     })
 
     $("#glpi").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/DocumentaionGlpi.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#glpi").parent().parent().append(div);
+            $("#glpi").parent().parent().append(div);
+        }
     })
 
     $("#m2l-mobile1").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/Documentation%20M2L%20mobile.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#m2l-mobile1").parent().parent().append(div);
+            $("#m2l-mobile1").parent().parent().append(div);
+        }
     })
 
     $("#m2l-mobile2").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/Documentation%20M2L%20mobile.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#m2l-mobile2").parent().parent().append(div);
+            $("#m2l-mobile2").parent().parent().append(div);
+        }
     })
 
     $("#m2l-web1").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/Documentation%20M2L%20web.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#m2l-web1").parent().parent().append(div);
+            $("#m2l-web1").parent().parent().append(div);
+        }
     })
 
     $("#m2l-web2").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/Documentation%20M2L%20web.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#m2l-web2").parent().parent().append(div);
+            $("#m2l-web2").parent().parent().append(div);
+        }
     })
 
     $("#gantt").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/PLANIFIER%20LES%20ACTIVITÉS.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#gantt").parent().parent().append(div);
+            $("#gantt").parent().parent().append(div);
+        }
     })
 
     $("#tests").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/RÉALISER%20LES%20TESTS%20D'INTÉGRATION%20ET%20D'ACCEPTATION%20D'UN%20SERVICE.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#tests").parent().parent().append(div);
+            $("#tests").parent().parent().append(div);
+        }
     })
 
     $("#save").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/MISE%20EN%20PLACE%20D’UN%20SERVEUR%20NODEJS%20AVEC%20UNE%20BASE%20DE%20DONNÉES%20SUR%20LINUX.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#save").parent().parent().append(div);
+            $("#save").parent().parent().append(div);
+        }
     })
 
     $("#erp").on("click", function () {
-        let div = `<div class="text-center mt-5" id="doc">
+        if ($("#doc")[0]) {
+            $("#doc").remove();
+        } else {
+            let div = `<div class="text-center mt-5" id="doc">
                 <iframe style="width: 150vh; height:  80vh"
                         src="doc/synthese/Présentation%20stage.pdf"
                         frameborder="0"></iframe>
             </div>`
-        $("#doc").remove();
-        $("#erp").parent().parent().append(div);
+            $("#erp").parent().parent().append(div);
+        }
     })
 
     $(document).ready(() => {
