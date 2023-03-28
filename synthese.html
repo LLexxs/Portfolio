@@ -223,6 +223,15 @@
                     </li>
                 </div>
             </ul>
+            <ul style="padding-top:20px; padding-bottom:5px">
+                <pre style="width:97%"> Projets professionnels </pre>
+                <div style="padding-left:2rem">
+                    <li>
+                        <button id="erp"> Développement d'un ERP en symfony
+                        </button>
+                    </li>
+                </div>
+            </ul>
         </div>
     </div>
 </main>
@@ -389,6 +398,16 @@
             </div>`
         $("#doc").remove();
         $("#save").parent().parent().append(div);
+    })
+
+    $("#erp").on("click", function () {
+        let div = `<div class="text-center mt-5" id="doc">
+                <iframe style="width: 150vh; height:  80vh"
+                        src="doc/synthese/Présentation%20stage.pdf"
+                        frameborder="0"></iframe>
+            </div>`
+        $("#doc").remove();
+        $("#erp").parent().parent().append(div);
     })
 
     $(document).ready(() => {
